@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .gender, .qualification {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            background: #8e28a7;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #862188;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration</h2>
+        <form onsubmit="return showMessage()">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="father">Father's Name:</label>
+            <input type="text" id="father" required>
+            
+            <label for="mother">Mother's Name:</label>
+            <input type="text" id="mother" required>
+            
+            <label for="usn">USN:</label>
+            <input type="text" id="usn" required>
+            
+            <label>Gender:</label>
+            <div class="gender">
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female" required> Female
+            </div>
+            
+            <label>Qualification:</label>
+            <div class="qualification">
+                <input type="checkbox" name="qualification" value="10th"> 10th
+                <input type="checkbox" name="qualification" value="12th"> 12th
+                <input type="checkbox" name="qualification" value="Graduate"> Graduate
+            </div>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" rows="3" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Registration Successful");
+            return false; // Prevents actual form submission
+        }
+    </script>
+</body>
+</html>
